@@ -1,42 +1,24 @@
-import React, { useState } from "react";
-import "./App.css";
+import React from "react";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import LoginForm from "./authPages/login";
+import SignUpForm from "./authPages/sigin";
+import HomePage from "./sourcePages/homePage";
+import UserHome from "./sourcePages/userHome";
 
 function App() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-    console.log("Logging in with", email, password);
-  };
+  
 
   return (
-    <div className="container">
-      <div className="login-box">
-        <h2 className="title">Login</h2>
-        <form onSubmit={handleLogin} className="form">
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="input"
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="input"
-            required
-          />
-          <button type="submit" className="button">
-            Login
-          </button>
-        </form>
-      </div>
+    <Router>
+      <div className="container">
+      <Routes>
+        <Route path="/LoginForm" element={<LoginForm/>}/>
+        <Route path="/SignUpForm" element={<SignUpForm/>}/>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/UserPage" element={<UserHome/>}/>
+      </Routes>
     </div>
+    </Router>
   );
 }
 

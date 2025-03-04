@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Help Clone</title>
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="/test/mainpage/main.html"><h2 class="logo">Web-Help</h2></a>
+        
+        <div class="coin-section">💰 Coins: <span id="coin-count">100</span></div>
+
+        <div class="hamburger-menu">
+            <button class="hamburger">☰</button>
+            <div class="menu-content">
+                <a href="/test/user page/user.html">Profile</a>
+                <a href="/test/mainpage/main.html">Community</a>
+                <a href="#">Chat</a>
+                <a href="/test/hisotory/history.html">Coin History</a>
+                <a href="/test/donatoin/donation.html">Donation</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="profile">
+            <img src="/test/Business-Connectivity-Guide2.png" alt="Cover Photo" class="cover-photo">
+            <div class="profile-details">
+                <img src="/test/user page/userImg.avif" alt="Profile Picture" class="profile-pic">
+                <h2 id="name">John Doe <span class="badge">Verified</span></h2>
+                <p id="bio">Bio: Web enthusiast</p>
+                <p><strong>Email:</strong> <span id="email">johndoe@example.com</span></p>
+                <p><strong>Phone:</strong> <span id="phone">+1234567890</span></p>
+                <p><strong>Location:</strong> <span id="location">New York, USA</span></p>
+                <div class="profile-actions">
+                    <button class="edit-profile" onclick="openEditForm()">Edit Profile</button>
+                    <button class="create-post">Create Post</button>
+                </div>
+            </div>
+        </main>
+
+        <div class="feed">
+            <div class="post">
+                <h3>John Doe</h3>
+                <p>Had a great day today! #blessed</p>
+                <img src="/test/Business-Connectivity-Guide2.png" alt="Post Image" class="post-image">
+                <button class="upvote">🔼 10</button>
+                <button class="share-btn">🔗 Share</button>
+            </div>
+            <div class="post">
+                <h3>John Doe</h3>
+                <p>Loving the new update on this platform! 🚀</p>
+                <img src="/test/Business-Connectivity-Guide2.png" alt="Post Image" class="post-image">
+                <button class="upvote">🔼 Up</button>
+                <button class="share-btn">🔗 Share</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Pop-Up Form -->
+    <div id="edit-profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditForm()">&times;</span>
+            <h2>Edit Profile</h2>
+            <label>Name:</label>
+            <input type="text" id="edit-name" placeholder="Enter name">
+            <label>Email:</label>
+            <input type="email" id="edit-email" placeholder="Enter email">
+            <label>Phone:</label>
+            <input type="text" id="edit-phone" placeholder="Enter phone number">
+            <label>Location:</label>
+            <input type="text" id="edit-location" placeholder="Enter location">
+            <label>Bio:</label>
+            <textarea id="edit-bio" placeholder="Enter bio"></textarea>
+            <button onclick="saveProfile()">Save</button>
+        </div>
+    </div>
+
+    <script>
+        function openEditForm() {
+            document.getElementById("edit-profile-modal").style.display = "block";
+            document.getElementById("edit-name").value = document.getElementById("name").innerText;
+            document.getElementById("edit-email").value = document.getElementById("email").innerText;
+            document.getElementById("edit-phone").value = document.getElementById("phone").innerText;
+            document.getElementById("edit-location").value = document.getElementById("location").innerText;
+            document.getElementById("edit-bio").value = document.getElementById("bio").innerText.replace("Bio: ", "");
+        }
+
+        function closeEditForm() {
+            document.getElementById("edit-profile-modal").style.display = "none";
+        }
+
+        function saveProfile() {
+            document.getElementById("name").innerText = document.getElementById("edit-name").value;
+            document.getElementById("email").innerText = document.getElementById("edit-email").value;
+            document.getElementById("phone").innerText = document.getElementById("edit-phone").value;
+            document.getElementById("location").innerText = document.getElementById("edit-location").value;
+            document.getElementById("bio").innerText = "Bio: " + document.getElementById("edit-bio").value;
+            closeEditForm();
+        }
+    </script>
+</body>
+</html>

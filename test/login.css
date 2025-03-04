@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #b4cefb; 
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.box-container {
+    display: flex;
+    width: 75rem;
+    height: 50rem;
+    background-color: white;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.left-side {
+    width: 50%;
+    background-color: #f0f0f0;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.left-side h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.left-side p {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: justify;
+    max-width: 90%;
+    line-height: 1.7;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.left-side img {
+    width: 45%;
+    height: auto;
+    border-radius: 0.8rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.right-side {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(234, 224, 244);
+    padding: 3rem;
+}
+
+.login-box {
+    width: 90%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+}
+
+.input {
+    width: 95%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.button {
+    width: 100%;
+    background-color: #6a0dad; 
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background-color: #5808b5; 
+}
+
+@media (max-width: 800px) {
+    .box-container {
+        flex-direction: column-reverse;
+        width: 88%;
+        height: auto;
+    }
+
+    .left-side {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .right-side {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .login-box {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .left-side h2 {
+        font-size: 1.2rem;
+    }
+
+    .left-side p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .image-container {
+        margin-top: auto;
+        gap: 0.5rem;
+    }
+
+    .left-side img {
+        width: 60%;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .form {
+        gap: 0.8rem;
+    }
+
+    .label {
+        font-size: 0.9rem;
+    }
+
+    .input {
+        width: 90%;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 1rem;
+        padding: 0.7rem;
+        width: 90%;
+    }
+
+    .create-account {
+        font-size: 0.8rem;
+    }
+}
