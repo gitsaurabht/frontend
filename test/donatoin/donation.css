@@ -1,3 +1,117 @@
+/* General Styles */
+body {
+    background-color: #18191a;
+    color: #e4e6eb;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar-donation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #242526;
+    padding: 15px 20px; 
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Left Section - Logo */
+.logo-donation {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Right Section - Coin, Search, User Pic, and Hamburger */
+.nav-right-donation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Coin Display */
+.coin-section-donation {
+    font-size: 18px;
+    font-weight: bold;
+    background: #3a3b3c;
+    padding: 5px 12px;
+    border-radius: 5px;
+}
+
+/* Search Icon */
+.search-icon-donation {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-icon-donation:hover {
+    color: #1877f2;
+}
+
+/* User Profile Picture */
+.nav-user-pic-donation {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 15px; 
+}
+
+/* Hamburger Menu (Now Next to Profile Pic) */
+.hamburger-menu-donation {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px; /* Extra spacing from the right */
+}
+
+.hamburger-donation {
+    background: #ff4500;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.menu-content-donation {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #242526;
+    min-width: 150px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hamburger-menu-donation:hover .menu-content-donation {
+    display: block;
+}
+
+.menu-content-donation a {
+    display: block;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu-content-donation a:hover {
+    background: #3a3b3c;
+}
+
+/* Donation History Section */
 .donation-history {
     padding: 20px;
     max-width: 800px;
@@ -6,19 +120,14 @@
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     overflow-x: auto;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .donation-history h2 {
     text-align: center;
     margin-bottom: 20px;
 }
-.history-table {
-    width: 100%;
-    border-collapse: collapse;
-    color: white;
-    table-layout: auto;
-}
+
 .total-funds {
     text-align: center;
     background: #3a3b3c;
@@ -29,75 +138,43 @@
     font-size: 18px;
     font-weight: bold;
 }
-.history-table th,
-.history-table td {
+
+/* Table */
+.history-table-donation {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+.history-table-donation th,
+.history-table-donation td {
     padding: 12px;
     text-align: center;
     border-bottom: 1px solid #3a3b3c;
 }
 
-.history-table th {
+.history-table-donation th {
     background: #3a3b3c;
 }
 
-.status-success {
+/* Status Colors */
+.status-success-donation {
     color: #4CAF50;
     font-weight: bold;
 }
 
-.status-pending {
+.status-pending-donation {
     color: #FFA500;
     font-weight: bold;
 }
 
-.status-failed {
+.status-failed-donation {
     color: #FF4500;
     font-weight: bold;
 }
 
-
-@media (max-width: 768px) {
-    .history-table thead {
-        display: none;
-    }
-
-    .history-table,
-    .history-table tbody,
-    .history-table tr {
-        display: block;
-        width: 100%;
-    }
-
-    .history-table tr {
-        margin-bottom: 10px;
-        background: #242526;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
-
-    .history-table td {
-        display: flex;
-        justify-content: space-between;
-        padding: 8px;
-        border-bottom: 1px solid #3a3b3c;
-        width: 96%;
-    }
-
-    .history-table td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        color: #e4e6eb;
-    }
-
-    .history-table td:last-child {
-        border-bottom: none;
-    }
-}
-
-
-
-.footer {
+/* Footer */
+.footer-donation {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -111,44 +188,91 @@
     font-size: 16px;
 }
 
-
-.footer-left, 
-.footer-right {
-    flex: 1; 
+.footer-left-donation,
+.footer-right-donation {
+    flex: 1;
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
-
-.footer-left a, 
-.footer-right a {
+.footer-left-donation a,
+.footer-right-donation a {
     color: white;
     text-decoration: none;
     font-size: 16px;
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
-.footer-left a:hover, 
-.footer-right a:hover {
+.footer-left-donation a:hover,
+.footer-right-donation a:hover {
     text-decoration: underline;
 }
 
-
+/* Responsive */
 @media (max-width: 768px) {
-    .footer {
-        flex-direction: column; 
+    .history-table-donation thead {
+        display: none;
+    }
+
+    .history-table-donation,
+    .history-table-donation tbody,
+    .history-table-donation tr {
+        display: block;
+        width: 100%;
+    }
+
+    .history-table-donation tr {
+        margin-bottom: 10px;
+        background: #242526;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .history-table-donation td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+        border-bottom: 1px solid #3a3b3c;
+        width: 96%;
+    }
+
+    .history-table-donation td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #e4e6eb;
+    }
+
+    .history-table-donation td:last-child {
+        border-bottom: none;
+    }
+
+    /* Navbar Adjustments */
+    .navbar-donation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-right-donation {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hamburger-donation {
+        margin: 10px 0;
+    }
+
+    /* Footer Responsive */
+    .footer-donation {
+        flex-direction: column;
         height: auto;
         padding: 15px;
         text-align: center;
     }
 
-    .footer-left, 
-    .footer-right {
+    .footer-left-donation,
+    .footer-right-donation {
         width: 100%;
         padding: 5px 0;
     }
 }
-
