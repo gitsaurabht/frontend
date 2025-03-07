@@ -1,3 +1,122 @@
+/* General Styles */
+body {
+    background-color: #18191a;
+    color: #e4e6eb;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #242526;
+    padding: 15px 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+}
+
+/* Navbar Right Section */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Coin Section */
+.coin-section {
+    font-size: 18px;
+    font-weight: bold;
+    background: #3a3b3c;
+    padding: 5px 12px;
+    border-radius: 5px;
+}
+
+/* Search Icon */
+.search-icon {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-icon:hover {
+    color: #1877f2;
+}
+
+/* User Profile Picture */
+.nav-user-pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger {
+    background: #ff4500;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 37px;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #242526;
+    min-width: 180px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.hamburger-menu:hover .menu-content {
+    display: block;
+}
+.menu-content a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.menu-content a:hover {
+    background: #3a3b3c;
+}
+
+/* Coin History Section */
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 80px;
+}
 
 .coin-history {
     padding: 20px;
@@ -14,7 +133,7 @@
     margin-bottom: 20px;
 }
 
-
+/* History Table */
 .history-table {
     width: 100%;
     border-collapse: collapse;
@@ -32,6 +151,7 @@
     background: #3a3b3c;
 }
 
+/* Status Colors */
 .status-success {
     color: #4CAF50;
     font-weight: bold;
@@ -46,3 +166,36 @@
     color: #FF4500;
     font-weight: bold;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .history-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .menu-content {
+        right: 0;
+        width: 100%;
+    }
+
+    .menu-content a {
+        padding: 12px;
+        text-align: center;
+    }
+    .coin-section{
+        display: none;
+    }
+    .search-icon{
+        display: none;
+    }
+    .nav-user-pic{
+        display: none;
+    }
+}
+
