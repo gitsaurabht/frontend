@@ -3,68 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web-Help Clone</title>
+    <title>User Profile - Web-Help</title>
     <link rel="stylesheet" href="user.css">
-    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header class="navbar">
-        <a href="/test/mainpage/main.html"><h2 class="logo">Web-Help</h2></a>
-        
-        <div class="coin-section">💰 Coins: <span id="coin-count">100</span></div>
 
-        <div class="hamburger-menu">
-            <button class="hamburger">☰</button>
-            <div class="menu-content">
-                <a href="/test/user page/user.html">Profile</a>
-                <a href="/test/mainpage/main.html">Community</a>
-                <a href="#">Chat</a>
-                <a href="/test/hisotory/history.html">Coin History</a>
-                <a href="/test/donatoin/donation.html">Donation</a>
-                <a href="#">Logout</a>
+    <!-- Navbar -->
+    <header class="navbar-profile">
+        <h2 class="logo-profile">Web-Help</h2>
+
+        <div class="nav-right-profile">
+            <div class="coin-section-profile">💰 Coins: <span id="coin-count">100</span></div>
+            <button class="search-icon-profile">🔍</button>
+            <img src="userImg.avif" alt="User" class="nav-user-pic-profile">
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger-menu-profile">
+                <button class="hamburger-profile">☰</button>
+                <div class="menu-content-profile">
+                    <a href="user.html">Profile</a>
+                    <a href="main.html">Community</a>
+                    <a href="#">Chat</a>
+                    <a href="history.html">Coin History</a>
+                    <a href="donation.html">Donation</a>
+                    <a href="#">Logout</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <div class="container">
-        <main class="profile">
-            <img src="/test/Business-Connectivity-Guide2.png" alt="Cover Photo" class="cover-photo">
-            <div class="profile-details">
-                <img src="/test/user page/userImg.avif" alt="Profile Picture" class="profile-pic">
-                <h2 id="name">John Doe <span class="badge">Verified</span></h2>
+    <!-- Profile Section -->
+    <div class="container-profile">
+        <main class="profile-main">
+            <img src="/test/Business-Connectivity-Guide2.png" alt="Cover Photo" class="cover-photo-profile">
+            <div class="profile-details-profile">
+                <img src="userImg.avif" alt="Profile Picture" class="profile-pic-profile">
+                <h2 id="name">John Doe <span class="badge-profile">Verified</span></h2>
                 <p id="bio">Bio: Web enthusiast</p>
                 <p><strong>Email:</strong> <span id="email">johndoe@example.com</span></p>
                 <p><strong>Phone:</strong> <span id="phone">+1234567890</span></p>
                 <p><strong>Location:</strong> <span id="location">New York, USA</span></p>
-                <div class="profile-actions">
-                    <button class="edit-profile" onclick="openEditForm()">Edit Profile</button>
-                    <button class="create-post">Create Post</button>
+                <div class="profile-actions-profile">
+                    <button class="edit-profile-profile" onclick="openEditForm()">Edit Profile</button>
+                    <button class="create-post-profile">Create Post</button>
                 </div>
             </div>
         </main>
 
-        <div class="feed">
-            <div class="post">
+        <!-- User Posts -->
+        <div class="feed-profile">
+            <div class="post-profile">
                 <h3>John Doe</h3>
                 <p>Had a great day today! #blessed</p>
-                <img src="/test/Business-Connectivity-Guide2.png" alt="Post Image" class="post-image">
-                <button class="upvote">🔼 10</button>
-                <button class="share-btn">🔗 Share</button>
-            </div>
-            <div class="post">
-                <h3>John Doe</h3>
-                <p>Loving the new update on this platform! 🚀</p>
-                <img src="/test/Business-Connectivity-Guide2.png" alt="Post Image" class="post-image">
-                <button class="upvote">🔼 Up</button>
-                <button class="share-btn">🔗 Share</button>
+                <img src="/test/Business-Connectivity-Guide2.png" alt="Post Image" class="post-image-profile">
+                <button class="upvote-profile">🔼 10</button>
+                <button class="share-btn-profile">🔗 Share</button>
             </div>
         </div>
     </div>
 
-    <!-- Edit Profile Pop-Up Form -->
-    <div id="edit-profile-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeEditForm()">&times;</span>
+    <!-- Edit Profile Modal -->
+    <div id="edit-profile-modal" class="modal-profile">
+        <div class="modal-content-profile">
+            <span class="close-profile" onclick="closeEditForm()">&times;</span>
             <h2>Edit Profile</h2>
             <label>Name:</label>
             <input type="text" id="edit-name" placeholder="Enter name">
@@ -80,6 +81,17 @@
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer-profile">
+        <div class="footer-left-profile">
+            <a href="#">Facing a problem? Contact Us | Help</a>
+        </div>
+        <div class="footer-right-profile">
+            <a href="#">Want to withdraw money? Click here</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
     <script>
         function openEditForm() {
             document.getElementById("edit-profile-modal").style.display = "block";
@@ -103,5 +115,6 @@
             closeEditForm();
         }
     </script>
+
 </body>
 </html>
