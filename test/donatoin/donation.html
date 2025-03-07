@@ -5,40 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donation History - Web-Help</title>
     <link rel="stylesheet" href="donation.css">
-    <link rel="stylesheet" href="/test/mainpage/main.css"> 
 </head>
 <body>
-    <header class="navbar">
-        <h2 class="logo">Web-Help</h2>
 
-        <div class="nav-right">
-            <div class="coin-section">💰 Coins: <span id="coin-count">100</span></div>
-            <button class="search-icon">🔍</button>
-            <img src="/test/user page/userImg.avif" alt="User" class="nav-user-pic">
-        </div>
+    <!-- Navbar -->
+    <header class="navbar-donation">
+        <h2 class="logo-donation">Web-Help</h2>
 
-        <div class="hamburger-menu">
-            <button class="hamburger" onclick="toggleMenu()">☰</button>
-            <div class="menu-content">
-                <a href="/test/user page/user.html">Profile</a>
-                <a href="/test/mainpage/main.html">Community</a>
-                <a href="#">Chat</a>
-                <a href="/test/hisotory/history.html">Coin History</a>
-                <a href="/test/donatoin/donation.html">Donation</a>
-                <a href="#">Logout</a>
+        <div class="nav-right-donation">
+            <div class="coin-section-donation">💰 Coins: <span id="coin-count">100</span></div>
+            <button class="search-icon-donation">🔍</button>
+            <img src="userImg.avif" alt="User" class="nav-user-pic-donation">
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger-menu-donation">
+                <button class="hamburger-donation">☰</button>
+                <div class="menu-content-donation">
+                    <a href="user.html">Profile</a>
+                    <a href="main.html">Community</a>
+                    <a href="#">Chat</a>
+                    <a href="history.html">Coin History</a>
+                    <a href="donation.html">Donation</a>
+                    <a href="#">Logout</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <div class="container">
+    <!-- Main Content -->
+    <div class="container-donation">
         <main class="donation-history">
             <h2>Donation History</h2>
             <div class="total-funds">
                 <h3>Total Funds Received: <span id="total-funds">0</span> Coins</h3>
             </div>
 
-            <div class="table-container">
-                <table class="history-table">
+            <!-- Table -->
+            <div class="table-container-donation">
+                <table class="history-table-donation">
                     <thead>
                         <tr>
                             <th>Date</th>
@@ -54,28 +58,28 @@
                             <td data-label="Post">My latest artwork 🎨</td>
                             <td data-label="Donor">@JohnDoe</td>
                             <td data-label="Amount" class="amount">200</td>
-                            <td data-label="Status" class="status-success">Received</td>
+                            <td data-label="Status" class="status-success-donation">Received</td>
                         </tr>
                         <tr>
                             <td data-label="Date">2024-02-20</td>
                             <td data-label="Post">Helping a local shelter 🏠</td>
                             <td data-label="Donor">@Alice</td>
                             <td data-label="Amount" class="amount">500</td>
-                            <td data-label="Status" class="status-success">Received</td>
+                            <td data-label="Status" class="status-success-donation">Received</td>
                         </tr>
                         <tr>
                             <td data-label="Date">2024-02-15</td>
                             <td data-label="Post">Support my project 💡</td>
                             <td data-label="Donor">@Bob</td>
                             <td data-label="Amount" class="amount">100</td>
-                            <td data-label="Status" class="status-pending">Pending</td>
+                            <td data-label="Status" class="status-pending-donation">Pending</td>
                         </tr>
                         <tr>
                             <td data-label="Date">2024-02-10</td>
                             <td data-label="Post">Streaming live now 🎮</td>
                             <td data-label="Donor">@Charlie</td>
                             <td data-label="Amount" class="amount">300</td>
-                            <td data-label="Status" class="status-failed">Failed</td>
+                            <td data-label="Status" class="status-failed-donation">Failed</td>
                         </tr>
                     </tbody>
                 </table>
@@ -83,24 +87,22 @@
         </main>
     </div>
 
-    <footer class="footer">
-        <div class="footer-left">
+    <!-- Footer -->
+    <footer class="footer-donation">
+        <div class="footer-left-donation">
             <a href="#">Facing a problem? Contact Us | Help</a>
         </div>
-        <div class="footer-right">
+        <div class="footer-right-donation">
             <a href="#">Want to withdraw money? Click here</a>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        function toggleMenu() {
-            document.getElementById("menu").classList.toggle("show");
-        }
-
         function calculateTotalFunds() {
             let total = 0;
             document.querySelectorAll(".amount").forEach((amountCell) => {
-                let status = amountCell.parentElement.querySelector(".status-success");
+                let status = amountCell.parentElement.querySelector(".status-success-donation");
                 if (status) {
                     total += parseInt(amountCell.textContent);
                 }
@@ -110,5 +112,6 @@
 
         document.addEventListener("DOMContentLoaded", calculateTotalFunds);
     </script>
+
 </body>
 </html>
