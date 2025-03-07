@@ -4,32 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coin History - Web-Help</title>
-    <link rel="stylesheet" href="/test/mainpage/main.css">
     <link rel="stylesheet" href="history.css">
 </head>
 <body>
+
+    <!-- Navbar -->
     <header class="navbar">
         <h2 class="logo">Web-Help</h2>
 
         <div class="nav-right">
             <div class="coin-section">💰 Coins: <span id="coin-count">100</span></div>
             <button class="search-icon">🔍</button>
-            <img src="/test/user page/userImg.avif" alt="User" class="nav-user-pic">
-        </div>
+            <img src="userImg.avif" alt="User" class="nav-user-pic">
 
-        <div class="hamburger-menu">
-            <button class="hamburger" onclick="toggleMenu()">☰</button>
-            <div class="menu-content">
-                <a href="/test/user page/user.html">Profile</a>
-                <a href="/test/mainpage/main.html">Community</a>
-                <a href="#">Chat</a>
-                <a href="/test/hisotory/history.html">Coin History</a>
-                <a href="/test/donatoin/donation.html">Donation</a>
-                <a href="#">Logout</a>
+            <!-- Hamburger Menu -->
+            <div class="hamburger-menu">
+                <button class="hamburger" onclick="toggleMenu()">☰</button>
+                <div class="menu-content">
+                    <a href="user.html">Profile</a>
+                    <a href="main.html">Community</a>
+                    <a href="#">Chat</a>
+                    <a href="history.html">Coin History</a>
+                    <a href="donation.html">Donation</a>
+                    <a href="#">Logout</a>
+                </div>
             </div>
         </div>
     </header>
 
+    <!-- Coin History Section -->
     <div class="container">
         <main class="coin-history">
             <h2>Coin Purchase History</h2>
@@ -72,10 +75,12 @@
         </main>
     </div>
 
+    <!-- JavaScript -->
     <script>
         function toggleMenu() {
-            document.getElementById("menu").classList.toggle("show");
+            document.querySelector(".menu-content").classList.toggle("show");
         }
     </script>
+
 </body>
 </html>
