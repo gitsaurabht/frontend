@@ -82,6 +82,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
+    margin-right: 37px;
 }
 
 .menu-content-donation {
@@ -210,7 +211,17 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .nav-user-pic-donation{
+        display: none;
+    }
+    .search-icon-donation{
+        display: none;
+    }
+
     .history-table-donation thead {
+        display: none;
+    }
+    .coin-section-donation{
         display: none;
     }
 
@@ -245,12 +256,6 @@ body {
 
     .history-table-donation td:last-child {
         border-bottom: none;
-    }
-
-    /* Navbar Adjustments */
-    .navbar-donation {
-        flex-direction: column;
-        align-items: center;
     }
 
     .nav-right-donation {
